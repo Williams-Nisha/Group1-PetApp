@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace PetApp.Models
 {
-    public class SerialNumberViewModel
+    public class AnimalCategoryViewModel
     {
         public List<Pet> pets;
-        public SelectList serial;
-        public string serialNumber { get; set; }
+        public SelectList category;
+        public string animalCategory { get; set; }
     }
 }

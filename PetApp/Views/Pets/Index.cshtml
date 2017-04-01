@@ -1,4 +1,4 @@
-@model  PetApp.Models.SerialNumberViewModel
+@model  PetApp.Models.AnimalCategoryViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -11,11 +11,11 @@
 </p>
     <form asp-controller="Pets" asp-action="Index" method="get">
 <p>
-    <select asp-for="serialNumber" asp-items="Model.serial">
+    <select asp-for="animalCategory" asp-items="Model.category">
         <option value="">All</option>
     </select>
 
-    Animal Category: <input type="text" name="SearchString">
+    Serial Number: <input type="text" name="SearchString">
     <input type="submit" value="Filter" />
 </p>
                 </form>

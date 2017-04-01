@@ -18,31 +18,31 @@ namespace PetApp.Controllers
             _context = context;    
         }
 
-        public async Task<IActionResult> Index(string serialNumber, string searchString)
+        public async Task<IActionResult> Index(string animalCategory, string searchString)
         {
             // Use LINQ to get list of genres.
-            IQueryable<string> serialQuery = from p in _context.Pet
-                                             orderby p.SerialNum
-                                             select p.SerialNum;
+            IQueryable<string> categoryQuery = from p in _context.Pet
+                                             orderby p.AnimalCategory
+                                             select p.AnimalCategory;
 
             var pets = from p in _context.Pet
                          select p;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                pets = pets.Where(s => s.AnimalCategory.Contains(searchString));
+                pets = pets.Where(s => s.SerialNum.Contains(searchString));
             }
 
-            if (!String.IsNullOrEmpty(serialNumber))
+            if (!String.IsNullOrEmpty(animalCategory))
             {
-                pets = pets.Where(x => x.SerialNum == serialNumber);
+                pets = pets.Where(x => x.AnimalCategory == animalCategory);
             }
 
-            var serialNumVM = new SerialNumberViewModel();
-            serialNumVM.serial = new SelectList(await serialQuery.Distinct().ToListAsync());
-            serialNumVM.pets = await pets.ToListAsync();
+            var animalCatVM = new AnimalCategoryViewModel();
+            animalCatVM.category = new SelectList(await categoryQuery.Distinct().ToListAsync());
+            animalCatVM.pets = await pets.ToListAsync();
 
-            return View(serialNumVM);
+            return View(animalCatVM);
         }
 
 

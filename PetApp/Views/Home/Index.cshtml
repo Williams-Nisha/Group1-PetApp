@@ -1,27 +1,29 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="bg-img">
-    <div class="jumbotron">
-        <h1>Pet Microchip Manager</h1>
-        <p class="lead">Find information about a specific microchip, add or delete information, or search the database by pet type or location.</p>
-    </div>
-    <div class="content-section">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <h2>Search</h2>
-                <p>
-                    Search the database for a specific animal by microchip number, or search by pet type or location.  You may edit or delete the pet information here.
-                </p>
-                <p><a class="btn btn-default" href="/Pets">Search &raquo;</a></p>
+
+    <div class="bg-img">
+        <div class="content-section">
+            <div class="jumbotron">
+                <h1>Pet Microchip Manager</h1>
+                <p class="lead">Find information about a specific microchip, add or delete information, or search the database by pet type or location.</p>
             </div>
-            <div class="col-md-4">
-                <h2>Add a new pet</h2>
-                <p></p>
-                <p><a class="btn btn-default" href="/Pets/Create">Add new &raquo;</a></p>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <h2>Search</h2>
+                    <p>
+                        Search the database for a specific animal by microchip number, or search by pet type or location.  You may edit or delete the pet information here.
+                    </p>
+                    <p><a class="btn btn-default" href="/Pets">Search &raquo;</a></p>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <h2>Add a new pet</h2>
+                    <p></p>
+                    <p><a class="btn btn-default" href="/Pets/Create">Add new &raquo;</a></p>
+                </div>
+                <div class="col-md-2"></div>
             </div>
-            <div class="col-md-2"></div>
         </div>
-    </div>
 </div>

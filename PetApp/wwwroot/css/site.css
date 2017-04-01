@@ -21,17 +21,20 @@ textarea {
     background-image: url(/images/beagle.jpg);
     background-repeat: no-repeat;
     height: 100vh;
-    background-position: left top;
+    background-size: cover;
 }
 .container {
     width:100%;
 }
 .content-section {
     color: white;
+    background-color: rgba(255,255,255,.1);
+    text-shadow: #CCC .5px 0 5px;
+    padding-bottom: 30px;
 }
 .jumbotron {
     color: white;
-    background: rgba(255,255,255,.1);
+   background-color: transparent;
 }
 /* Carousel */
 .carousel-caption p {
