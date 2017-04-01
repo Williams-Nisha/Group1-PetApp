@@ -1,0 +1,9 @@
+E:\college\CIT301C\PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.deps.json
+E:\college\CIT301C\PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.runtimeconfig.json
+E:\college\CIT301C\PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.runtimeconfig.dev.json
+E:\college\CIT301C\PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.dll
+E:\college\CIT301C\PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.pdb
+E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.csprojResolveAssemblyReference.cache
+E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.AssemblyInfo.cs
+E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.dll
+E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.pdb
