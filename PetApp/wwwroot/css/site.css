@@ -17,6 +17,22 @@ textarea {
     max-width: 280px;
 }
 
+.bg-img {
+    background-image: url(/images/beagle.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: left top;
+}
+.container {
+    width:100%;
+}
+.content-section {
+    color: white;
+}
+.jumbotron {
+    color: white;
+    background: rgba(255,255,255,.1);
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
