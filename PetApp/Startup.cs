@@ -12,7 +12,7 @@ using PetApp.Models;
 
 namespace PetApp
 {
-    public class Startup
+    public class Startup  
     {
         public Startup(IHostingEnvironment env)
         {
