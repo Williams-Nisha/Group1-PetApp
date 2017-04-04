@@ -11,7 +11,7 @@ namespace PetApp.Models
         [DataType(DataType.Date)]
         public DateTime RegisterDate { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
+        [RegularExpression(@"^[a-zA-Z0-9]*$")]
         [Required]
         [StringLength(9)]
         [Display(Name = "Serial Number")]
@@ -40,7 +40,7 @@ namespace PetApp.Models
         [Display(Name = "Owner Name")]
         public string OwnerName { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
+        [RegularExpression(@"^[\w ]+$")]
         [Required]
         [StringLength(50)]
         [Display(Name = "Owner Street")]
@@ -58,13 +58,13 @@ namespace PetApp.Models
         [Display(Name = "Owner State")]
         public string OwnerState { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
+        [RegularExpression(@"^[0-9]*$")]
         [Required]
         [StringLength(5)]
         [Display(Name = "Owner Zip")]
         public string OwnerZip { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
+        [RegularExpression(@"^(?:-*\d-*){10}$")]
         [Required]
         [StringLength(12)]
         [Display(Name = "Phone Number")]
