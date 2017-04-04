@@ -7,12 +7,3 @@ E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.csprojResolveAss
 E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.AssemblyInfo.cs
 E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.dll
 E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.pdb
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.deps.json
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.runtimeconfig.json
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.runtimeconfig.dev.json
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.dll
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.pdb
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.csprojResolveAssemblyReference.cache
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.AssemblyInfo.cs
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.dll
-C:\Users\Nikkala\Source\Repos\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.pdb
