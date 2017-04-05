@@ -1,117 +1,152 @@
 @model  PetApp.Models.AnimalCategoryViewModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "PetApp Search";
 }
 
-<h2>Index</h2>
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create a New Pet Record</a>
 </p>
-    <form asp-controller="Pets" asp-action="Index" method="get">
-<p>
-    <select asp-for="animalCategory" asp-items="Model.category">
-        <option value="">All</option>
-    </select>
 
-    Serial Number: <input type="text" name="SearchString">
-    <input type="submit" value="Filter" />
+<h2>Pet Search</h2>
+
+<p>
+    Search for a pet by category (dog, cat, etc.), identification chip serial number,
+    breed, zip code, or any combination.  Leave all fields blank and select "All" for pet category to display all of the pets in the database.
 </p>
-                </form>
+
+<form asp-controller="Pets" asp-action="Index" method="get">
+    <p>
+        Pet Category:  <select asp-for="AnimalCategory" asp-items="Model.category">
+            <option value="">All</option>
+        </select>
+
+        Serial Number: <input type="text" name="searchString">
+
+        Breed: <input type="text" name="getBreed">
+
+        Zip code: <input type="text" name="getZip">
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].PhotoUrl)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].RegisterDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].SerialNum)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].AnimalCategory)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].Breed)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].AnimalName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].BirthDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].OwnerName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].OwnerStreet)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].OwnerCity)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].OwnerState)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].OwnerZip)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].OwnerPhoneNum)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].PhotoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].RegisterDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].SerialNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].AnimalCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].Breed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].AnimalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].OwnerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].OwnerStreet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].OwnerCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].OwnerState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].OwnerZip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pets[0].OwnerPhoneNum)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.pets) {
-        <tr>
-            <td>
-                <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" height="150" width="150" alt="">
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RegisterDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SerialNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AnimalCategory)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Breed)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AnimalName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirthDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerStreet)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerCity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerState)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerZip)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerPhoneNum)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.pets)
+        {
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" height="150" width="150" alt="">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegisterDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SerialNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnimalCategory)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Breed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnimalName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerStreet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerState)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerZip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerPhoneNum)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.pets.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.pets.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-page="@(Model.pets.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled btn">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-page="@(Model.pets.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled btn">
+    Next
+</a>

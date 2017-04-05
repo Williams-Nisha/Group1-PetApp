@@ -15,18 +15,19 @@ namespace PetApp.Controllers
 
         public PetsController(PetAppContext context)
         {
-            _context = context;    
+            _context = context;
         }
 
-        public async Task<IActionResult> Index(string animalCategory, string searchString)
+
+        public async Task<IActionResult> Index(string animalCategory, string searchString, string getBreed, string getZip, int? page)
         {
             // Use LINQ to get list of genres.
             IQueryable<string> categoryQuery = from p in _context.Pet
-                                             orderby p.AnimalCategory
-                                             select p.AnimalCategory;
+                                               orderby p.AnimalCategory
+                                               select p.AnimalCategory;
 
             var pets = from p in _context.Pet
-                         select p;
+                       select p;
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -38,9 +39,22 @@ namespace PetApp.Controllers
                 pets = pets.Where(x => x.AnimalCategory == animalCategory);
             }
 
+            if (!String.IsNullOrEmpty(getBreed))
+            {
+                pets = pets.Where(s => s.Breed.Contains(getBreed));
+            }
+
+            if (!String.IsNullOrEmpty(getZip))
+            {
+                pets = pets.Where(s => s.OwnerZip.Contains(getZip));
+            }
+
             var animalCatVM = new AnimalCategoryViewModel();
             animalCatVM.category = new SelectList(await categoryQuery.Distinct().ToListAsync());
-            animalCatVM.pets = await pets.ToListAsync();
+            //animalCatVM.pets = await pets.ToListAsync();
+
+            int pageSize = 4;
+            animalCatVM.pets = await PaginatedList<Pet>.CreateAsync(pets.AsNoTracking(), page ?? 1, pageSize);
 
             return View(animalCatVM);
         }

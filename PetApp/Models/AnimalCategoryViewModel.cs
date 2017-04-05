@@ -5,8 +5,8 @@ namespace PetApp.Models
 {
     public class AnimalCategoryViewModel
     {
-        public List<Pet> pets;
+        public PaginatedList<Pet> pets;
         public SelectList category;
-        public string animalCategory { get; set; }
+        public string AnimalCategory { get; set; }
     }
 }
