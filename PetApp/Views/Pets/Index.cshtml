@@ -23,6 +23,9 @@
     <thead>
         <tr>
                 <th>
+                    @Html.DisplayNameFor(model => model.pets[0].PhotoUrl)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.pets[0].RegisterDate)
                 </th>
                 <th>
@@ -58,15 +61,15 @@
                 <th>
                     @Html.DisplayNameFor(model => model.pets[0].OwnerPhoneNum)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.pets[0].PhotoUrl)
-                </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.pets) {
         <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" height="150" width="150" alt="">
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RegisterDate)
             </td>
@@ -102,9 +105,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OwnerPhoneNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoUrl)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
