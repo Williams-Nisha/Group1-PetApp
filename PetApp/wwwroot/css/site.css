@@ -1,8 +1,10 @@
 ﻿html {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 body {
+    height: 100%;
     margin: 0;
     padding-top: 50px;
     padding-bottom: 0;
@@ -94,7 +96,7 @@ textarea {
 
 
 /* --------------------------------------------------------------
-    Pets
+    Pets Index
 ----------------------------------------------------------------- */
 .pets {
     padding-left: 20px;
@@ -131,7 +133,9 @@ textarea {
 }
 
 .pets-table {
+    border-bottom: 1px solid #ccc;
     font-size: 11px;
+    margin-bottom: 0;
 }
 .pets-table img {
     border-radius: 4px;
@@ -144,6 +148,29 @@ textarea {
 .pets-table .btn-danger {
     margin-top: 10px;
 }
+
+/* --------------------------------------------------------------
+    Pets Details
+----------------------------------------------------------------- */
+.pet-details {
+    height: calc(100vh - 50px - 90px);
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.pet-details-header {
+    position: relative;
+}
+.pet-details-header .btn-group {
+    position: absolute;
+        bottom: 0;
+        right: 0;
+}
+.pet-details img {
+    border-radius: 4px;
+    width: 100%;
+}
+
 /* --------------------------------------------------------------
     Media queries
 ----------------------------------------------------------------- */
