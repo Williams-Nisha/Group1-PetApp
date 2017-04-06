@@ -4,87 +4,102 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<div class="pet-details">
+    <header class="pet-details-header">
+        <h2>@Html.DisplayFor(model => model.AnimalName)</h2>
+        <div class="btn-group">
+            <a asp-action="Index" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                Back to List
+            </a>
+            <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                Edit
+            </a>
+        </div>
+    </header>
 
-<div>
-    <h4>Pet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.RegisterDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.RegisterDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.SerialNum)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.SerialNum)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.AnimalCategory)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnimalCategory)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Breed)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Breed)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.AnimalName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AnimalName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OwnerName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerStreet)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OwnerStreet)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerState)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OwnerState)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerZip)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OwnerZip)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerPhoneNum)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OwnerPhoneNum)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PhotoUrl)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PhotoUrl)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="@Html.DisplayFor(model => model.PhotoUrl)" alt="@Html.DisplayFor(model => model.AnimalName)">
+        </div>
+
+        <div class="col-md-4">
+            <h3>Pet Details</h3>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.RegisterDate)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.RegisterDate)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SerialNum)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SerialNum)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AnimalCategory)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AnimalCategory)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Breed)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Breed)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AnimalName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AnimalName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.BirthDate)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BirthDate)
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Owner Details</h3>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.OwnerName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.OwnerName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.OwnerStreet)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.OwnerStreet)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.OwnerState)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.OwnerState)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.OwnerZip)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.OwnerZip)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.OwnerPhoneNum)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.OwnerPhoneNum)
+                </dd>
+            </dl>
+        </div>
+    </div>
 </div>

@@ -2,28 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-    <div class="bg-img">
-        <div class="content-section">
-            <div class="jumbotron">
-                <h1>Pet Microchip Manager</h1>
-                <p class="lead">Find information about a specific microchip, add or delete information, or search the database by pet type or location.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-sm-2"></div>
-                <div class="col-md-3 col-sm-3">
-                    <h2>Search</h2>
-                    <p>
-                        Search the database for a specific animal by microchip number, or search by pet type or location.  You may edit or delete the pet information here.
-                    </p>
-                    <p><a class="btn btn-default" href="/Pets">Search &raquo;</a></p>
-                </div>
-                <div class="col-md-2 col-sm-2"></div>
-                <div class="col-md-3 col-sm-2">
-                    <h2>Add a new pet</h2>
-                    <p></p>
-                    <p><a class="btn btn-default" href="/Pets/Create">Add new &raquo;</a></p>
-                </div>
-                <div class="col-md-2 col-sm-2"></div>
+<div class="bg-img">
+    <div class="content-section">
+        <div class="jumbotron">
+            <h1>Pet Microchip Manager</h1>
+            <p class="lead">Search the database for a specific animal by microchip number, or search by pet type or location.  You may edit or delete the pet information after you search for and find what you're looking for.</p>
+            <div class="pet-options">
+                <a class="btn btn-lg btn-primary" href="/Pets">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    Search
+                </a>
+                <span class="or">or</span>
+                <a class="btn btn-lg btn-primary" href="/Pets/Create">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    Add new pet
+                </a>
             </div>
         </div>
+    </div>
 </div>
