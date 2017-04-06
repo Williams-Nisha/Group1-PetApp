@@ -4,115 +4,106 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<div class="pet-details">
+    <form asp-action="Create">
+        <header class="pet-details-header">
+            <h2>Add new pet</h2>
+            
+            <div class="btn-group">
+                <a asp-action="Index" class="btn btn-default">
+                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                    Back to List
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                    Save
+                </button>
+            </div>     
+        </header>
 
-<form asp-action="Create">
-    <div class="form-horizontal">
-        <h4>Pet</h4>
-        <hr />
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="RegisterDate" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Pet Details</h3>
+        
+            <div class="form-group">
+                <label asp-for="RegisterDate"></label>
                 <input asp-for="RegisterDate" class="form-control" />
                 <span asp-validation-for="RegisterDate" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="SerialNum" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="SerialNum"></label>
                 <input asp-for="SerialNum" class="form-control" />
                 <span asp-validation-for="SerialNum" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="AnimalCategory" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="AnimalCategory"></label>
                 <input asp-for="AnimalCategory" class="form-control" />
                 <span asp-validation-for="AnimalCategory" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="Breed" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="Breed"></label>
                 <input asp-for="Breed" class="form-control" />
                 <span asp-validation-for="Breed" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="AnimalName" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="AnimalName"></label>
                 <input asp-for="AnimalName" class="form-control" />
                 <span asp-validation-for="AnimalName" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="BirthDate" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="BirthDate"></label>
                 <input asp-for="BirthDate" class="form-control" />
                 <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-group">
-            <label asp-for="OwnerName" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+        <div class="col-md-6">
+            <h3>Owner Details</h3>
+            
+            <div class="form-group">
+                <label asp-for="OwnerName"></label>
                 <input asp-for="OwnerName" class="form-control" />
                 <span asp-validation-for="OwnerName" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="OwnerStreet" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+            <div class="form-group">
+                <label asp-for="OwnerStreet"></label>
                 <input asp-for="OwnerStreet" class="form-control" />
                 <span asp-validation-for="OwnerStreet" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="OwnerCity" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="OwnerCity" class="form-control" />
-                <span asp-validation-for="OwnerCity" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="OwnerState" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="OwnerState"></label>
                 <input asp-for="OwnerState" class="form-control" />
                 <span asp-validation-for="OwnerState" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="OwnerZip" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+
+            <div class="form-group">
+                <label asp-for="OwnerZip"></label>
                 <input asp-for="OwnerZip" class="form-control" />
                 <span asp-validation-for="OwnerZip" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="OwnerPhoneNum" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+            <div class="form-group">
+                <label asp-for="OwnerPhoneNum"></label>
                 <input asp-for="OwnerPhoneNum" class="form-control" />
                 <span asp-validation-for="OwnerPhoneNum" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="PhotoUrl" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
+            <div class="form-group">
+                <label asp-for="PhotoUrl"></label>
                 <input asp-for="PhotoUrl" class="form-control" />
                 <span asp-validation-for="PhotoUrl" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-</form>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+    </form>
 </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
