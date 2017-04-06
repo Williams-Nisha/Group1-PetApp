@@ -121,7 +121,7 @@ namespace PetApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,RegisterDate,SerialNum,AnimalCategory,Breed,AnimalName,BirthDate,OwnerName,OwnerStreet,OwnerState,OwnerZip,OwnerPhoneNum,PhotoUrl")] Pet pet)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,RegisterDate,SerialNum,AnimalCategory,Breed,AnimalName,BirthDate,OwnerName,OwnerStreet,OwnerCity,OwnerState,OwnerZip,OwnerPhoneNum,PhotoUrl")] Pet pet)
         {
             if (id != pet.ID)
             {
