@@ -153,17 +153,23 @@ textarea {
     Pets Details
 ----------------------------------------------------------------- */
 .pet-details {
-    height: 100vh;
+    height: calc(100vh - 50px - 90px);
     padding-left: 20px;
     padding-right: 20px;
-    
+}
+.new-pet,
+.edit-pet {
+    height: auto;
 }
 .pet-details-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     position: relative;
 }
 .pet-details-header .btn-group {
     position: absolute;
-        bottom: 0;
+        bottom: 20px;
         right: 0;
 }
 .pet-details img {
