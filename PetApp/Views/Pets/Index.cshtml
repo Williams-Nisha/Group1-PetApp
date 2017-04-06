@@ -5,148 +5,179 @@
 }
 
 
+<section class="pets">
+    <header class="pets-header">
+        <h2>Pet Search</h2>
 
-<p>
-    <a asp-action="Create">Create a New Pet Record</a>
-</p>
+        <p>
+            Search for a pet by category (dog, cat, etc.), identification chip serial number,
+            breed, zip code, or any combination.  Leave all fields blank and select "All" for pet category to display all of the pets in the database.
+        </p>
 
-<h2>Pet Search</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Add a Pet
+        </a>
+    </header>    
 
-<p>
-    Search for a pet by category (dog, cat, etc.), identification chip serial number,
-    breed, zip code, or any combination.  Leave all fields blank and select "All" for pet category to display all of the pets in the database.
-</p>
+    <form asp-controller="Pets" asp-action="Index" method="get" class="pets-filter-bar form-inline">
+        <div class="form-group">
+            <label for="AnimalCategory">Pet Category</label>
+            <select asp-for="AnimalCategory" asp-items="Model.category" class="form-control">
+                <option value="">All</option>
+            </select>
+        </div>
 
-<form asp-controller="Pets" asp-action="Index" method="get">
-    <p>
-        Pet Category:  <select asp-for="AnimalCategory" asp-items="Model.category">
-            <option value="">All</option>
-        </select>
+        <div class="form-group">
+            <label for="searchString">Serial Number</label>
+            <input type="text" name="searchString" class="form-control" size="10">
+        </div>
 
-        Serial Number: <input type="text" name="searchString">
+        <div class="form-group">
+            <label for="getBreed">Breed</label>
+            <input type="text" name="getBreed" class="form-control">
+        </div>
 
-        Breed: <input type="text" name="getBreed">
+        <div class="form-group">
+            <label for="getZip">Zip Code</label>
+            <input type="text" name="getZip" class="form-control" size="5">
+        </div>
+        
+        <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            Search
+        </button>
+    </form>
 
-        Zip code: <input type="text" name="getZip">
-        <input type="submit" value="Search" />
-    </p>
-</form>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].PhotoUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].RegisterDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].SerialNum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].AnimalCategory)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].Breed)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].AnimalName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].BirthDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].OwnerName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].OwnerStreet)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].OwnerCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].OwnerState)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].OwnerZip)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pets[0].OwnerPhoneNum)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.pets)
-        {
+    <table class="table table-condensed pets-table ">
+        <thead>
             <tr>
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" height="150" width="150" alt="">
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RegisterDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SerialNum)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AnimalCategory)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Breed)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AnimalName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BirthDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnerName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnerStreet)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnerCity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnerState)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnerZip)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OwnerPhoneNum)
-                </td>
-
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].PhotoUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].RegisterDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].SerialNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].AnimalCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].Breed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].AnimalName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].BirthDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].OwnerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].OwnerStreet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].OwnerCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].OwnerState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].OwnerZip)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pets[0].OwnerPhoneNum)
+                </th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody class="table-striped">
+            @foreach (var item in Model.pets)
+            {
+                <tr class="pet">
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" height="100" width="100" alt="">
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegisterDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SerialNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnimalCategory)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Breed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnimalName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BirthDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerStreet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerCity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerState)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerZip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerPhoneNum)
+                    </td>
 
-@{
-    var prevDisabled = !Model.pets.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.pets.HasNextPage ? "disabled" : "";
-}
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-xs btn-default">
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            View Details
+                        </a>
+                        <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-xs btn-default">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            Edit
+                        </a>
+                        
+                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-xs btn-danger">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-page="@(Model.pets.PageIndex - 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @prevDisabled btn">
-    Previous
-</a>
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-page="@(Model.pets.PageIndex + 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @nextDisabled btn">
-    Next
-</a>
+    @{
+        var prevDisabled = !Model.pets.HasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.pets.HasNextPage ? "disabled" : "";
+    }
+    
+    <div class="btn-group pagination" role="group">
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-page="@(Model.pets.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-page="@(Model.pets.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+    
+</section>

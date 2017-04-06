@@ -7,3 +7,12 @@ E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.csprojResolveAss
 E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.AssemblyInfo.cs
 E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.dll
 E:\college\CIT301C\PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.pdb
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.deps.json
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.runtimeconfig.json
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.runtimeconfig.dev.json
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.dll
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\bin\Debug\netcoreapp1.1\PetApp.pdb
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.AssemblyInfo.cs
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.dll
+\\vmware-host\Shared Folders\Dropbox (Personal)\School\CIT301C\Projects\Group1-PetApp\PetApp\obj\Debug\netcoreapp1.1\PetApp.pdb

@@ -1,42 +1,87 @@
-﻿body {
+﻿html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
+/* --------------------------------------------------------------
+    Main content
+----------------------------------------------------------------- */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-.bg-img {
-    background-image: url(/images/beagle.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-}
 .container {
     width:100%;
 }
 .content-section {
     color: white;
     background-color: rgba(255,255,255,.1);
-    text-shadow: #CCC .5px 0 5px;
-    height: 100vh;
+    /*text-shadow: #CCC .5px 0 5px;*/
+    /*height: 100vh;*/
 }
+
+/* --------------------------------------------------------------
+    Footer
+----------------------------------------------------------------- */
+.body-content footer {
+    border-top: 1px solid #ccc;
+    line-height: 55px;
+    height: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* --------------------------------------------------------------
+    Forms elements
+----------------------------------------------------------------- */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+/* --------------------------------------------------------------
+    Homepage
+----------------------------------------------------------------- */
+.bg-img {
+    background-image: url(/images/beagle.jpg);
+    background-repeat: no-repeat;
+    height: calc(100vh - 50px - 66px);
+    background-size: cover;
+}
+
 .jumbotron {
     color: white;
-   background-color: transparent;
+    background-color: transparent;
 }
-/* Carousel */
+
+.jumbotron h1,
+.jumbotron p,
+.jumbotron .or {
+    text-shadow: #666 0 0 6px 0, #333 0 0 2px 0;
+}
+
+.jumbotron .or {
+    display: inline-block;
+    padding: 0 20px;
+}
+.bg-img .jumbotron {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px - 66px);
+    justify-content: flex-end;
+    max-width: 1000px;
+}
+
+
+/* --------------------------------------------------------------
+    Carousel
+----------------------------------------------------------------- */
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
@@ -47,7 +92,61 @@ textarea {
     width: 100%;
 }
 
-/* Hide/rearrange for smaller screens */
+
+/* --------------------------------------------------------------
+    Pets
+----------------------------------------------------------------- */
+.pets {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pets-header {
+    padding-right: 150px;
+    position: relative;
+}
+.pets-header .btn-primary {
+    position: absolute;
+        bottom: 10px;
+        right: 0;
+}
+
+.pets-filter-bar {
+    background-color: #efefef;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.pets-filter-bar .form-group {
+    margin-right: 15px;
+}
+.pets-filter-bar input {
+    min-width: auto;
+    width: auto;
+}
+.pets-filter-bar .btn {
+    float: right;
+}
+
+.pets-table {
+    font-size: 11px;
+}
+.pets-table img {
+    border-radius: 4px;
+}
+.pets-table .btn {
+    display: block;
+    margin-bottom: 2px;
+    text-align: left;
+}
+.pets-table .btn-danger {
+    margin-top: 10px;
+}
+/* --------------------------------------------------------------
+    Media queries
+----------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
     /* Hide captions */
     .carousel-caption {

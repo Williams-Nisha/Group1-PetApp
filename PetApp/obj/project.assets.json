@@ -10756,15 +10756,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nisha\\.nuget\\packages\\": {}
+    "C:\\Users\\Bermon Painter\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\college\\CIT301C\\PetApp\\PetApp\\PetApp.csproj",
+      "projectUniqueName": "\\\\vmware-host\\Shared Folders\\Dropbox (Personal)\\School\\CIT301C\\Projects\\Group1-PetApp\\PetApp\\PetApp.csproj",
       "projectName": "PetApp",
-      "projectPath": "E:\\college\\CIT301C\\PetApp\\PetApp\\PetApp.csproj",
-      "outputPath": "E:\\college\\CIT301C\\PetApp\\PetApp\\obj\\",
+      "projectPath": "\\\\vmware-host\\Shared Folders\\Dropbox (Personal)\\School\\CIT301C\\Projects\\Group1-PetApp\\PetApp\\PetApp.csproj",
+      "outputPath": "\\\\vmware-host\\Shared Folders\\Dropbox (Personal)\\School\\CIT301C\\Projects\\Group1-PetApp\\PetApp\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
